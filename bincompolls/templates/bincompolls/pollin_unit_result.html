@@ -1,0 +1,30 @@
+{% extends 'bincompolls/base.html' %}
+
+{% load static %}
+   {% block content %}
+    <main>
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">Polling unit result</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Polling unit result</li>
+            </ol>
+            <div class="card mb-4">
+                <div class="card-body">
+
+                    <p class="mb-0">
+                        Here you can find the list of political party scores in individual polling unit.
+                        <code>.sb-nav-fixed</code>
+                        class from the
+                        <code>body</code>
+                        
+                        {% include 'included/table_pu_announced_result.html' %}
+                    </p>
+                </div>
+            </div>
+            <div style="height: 100vh"></div>
+            <div class="card mb-4"><div class="card-body">happy viewing</div></div>
+        </div>
+    </main>
+{% endblock content %}
+

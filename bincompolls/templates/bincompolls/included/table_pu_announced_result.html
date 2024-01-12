@@ -1,0 +1,38 @@
+
+{% extends 'bincompolls/base.html '}
+
+<div class="card-header">
+    <i class="fas fa-table me-1"></i>
+    Polling Unit result
+</div>
+<div class="card-body">
+    <table id="datatablesSimple">
+        <thead>
+            <tr>
+                <th>Polling Unit</th>
+                <th>Part</th>
+                <th>party score</th>
+                
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Polling unit</th>
+                <th>Part</th>
+                <th>party score</th>
+                
+            </tr>
+        </tfoot>
+        <tbody>
+            {% for items in pu_result %}
+            <tr>
+                <td>{{items.polling_unit_uniqueid}}</td>
+                <td>{{items.party_abbreviation}}</td>
+                <td>{{items.party_score}}</td>
+                
+            </tr>
+            {% endfor %}
+           
+        </tbody>
+    </table>
+</div>

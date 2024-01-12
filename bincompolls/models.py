@@ -28,6 +28,8 @@ class AnnouncedPuResults(models.Model):
     date_entered = models.DateTimeField(blank=True, null=True)
     user_ip_address = models.CharField(max_length=200)
 
+
+
     class Meta:
         managed = False
         db_table = 'announced_pu_results'
@@ -45,7 +47,7 @@ class Lga(models.Model):
     entered_by_user = models.CharField(max_length=200)
     date_entered = models.DateTimeField(blank=True, null=True)
     user_ip_address = models.CharField(max_length=200)
-
+    
     class Meta:
         managed = False
         db_table = 'lga'
